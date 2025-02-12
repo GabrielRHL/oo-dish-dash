@@ -17,12 +17,15 @@ Restaurant.change_state(restaurant_granu)
 # restaurant_il_piacere.receive_rate('Gabriel', 5)
 # restaurant_il_piacere.receive_rate('Grazielle', 5)
 
-juice_drink = Drink('Suco de laranja', 5, '500ml')
-bread_dish = Dish('Pão de queijo', 4, 'Mini pão de queijo')
+hot_chocolate_drink = Drink('Chocolate quente', 15, '300ml')
+cheese_bread_dish = Dish('Pão de queijo', 10, 'Pão de queijo grande')
+
+restaurant_granu.add_dish_to_menu(cheese_bread_dish)
+restaurant_granu.add_drink_to_menu(hot_chocolate_drink)
 
 def main():
-    print(bread_dish)
-    print(juice_drink)
+    print(cheese_bread_dish)
+    print(hot_chocolate_drink)
     # Restaurant.display_restaurants()
 
 if __name__ == '__main__':
