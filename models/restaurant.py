@@ -8,6 +8,7 @@ class Restaurant:
         self._category = category
         self._active = False
         self._rate = []
+        self._menu = []
         Restaurant.restaurants.append(self)
 
     @property
@@ -33,6 +34,12 @@ class Restaurant:
         rating_qtd = len(self._rate)
         avg = round(rate_sum / rating_qtd, 1)
         return avg
+    
+    def add_dish_to_menu(self, dish):
+        self._menu.append(dish)
+
+    def add_drink_to_menu(self, drink):
+        self._menu.append(drink)
     
     @classmethod
     def display_restaurants(cls):
