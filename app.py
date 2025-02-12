@@ -24,8 +24,7 @@ restaurant_granu.add_to_menu(cheese_bread_dish)
 restaurant_granu.add_to_menu(hot_chocolate_drink)
 
 def main():
-    print(cheese_bread_dish)
-    print(hot_chocolate_drink)
+    restaurant_granu.display_menu
     # Restaurant.display_restaurants()
 
 if __name__ == '__main__':
