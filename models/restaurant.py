@@ -1,4 +1,5 @@
 from models.rating import Rating
+from models.menu.menu import Menu
 
 class Restaurant:
     restaurants = []
@@ -35,11 +36,9 @@ class Restaurant:
         avg = round(rate_sum / rating_qtd, 1)
         return avg
     
-    def add_dish_to_menu(self, dish):
-        self._menu.append(dish)
-
-    def add_drink_to_menu(self, drink):
-        self._menu.append(drink)
+    def add_to_menu(self, item):
+        if isinstance(item, Menu):
+            self._menu.append(item)
     
     @classmethod
     def display_restaurants(cls):
