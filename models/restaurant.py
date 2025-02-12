@@ -1,5 +1,7 @@
 from models.rating import Rating
 from models.menu.menu import Menu
+from models.menu.dish import Dish
+from models.menu.drink import Drink
 
 class Restaurant:
     restaurants = []
@@ -39,6 +41,18 @@ class Restaurant:
     def add_to_menu(self, item):
         if isinstance(item, Menu):
             self._menu.append(item)
+
+    @property
+    def display_menu(self):
+        print(f'Cardápio do restaurante {self._name}\n')
+        for i, item in enumerate(self._menu, start=1):
+            if isinstance(item, Dish):
+                dish_message = f'{i}. Nome do prato: {item._name} | Preço: R${item._price} | Descrição: {item._description}'
+                print(dish_message)
+            elif isinstance(item, Drink):
+                drink_message = f'{i}. Nome da bebida: {item._name} | Preço: R${item._price} | Tamanho: {item._size}'
+                print(drink_message)
+
     
     @classmethod
     def display_restaurants(cls):
