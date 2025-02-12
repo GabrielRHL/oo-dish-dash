@@ -18,7 +18,9 @@ Restaurant.change_state(restaurant_granu)
 # restaurant_il_piacere.receive_rate('Grazielle', 5)
 
 hot_chocolate_drink = Drink('Chocolate quente', 15, '300ml')
+hot_chocolate_drink.apply_discount()
 cheese_bread_dish = Dish('Pão de queijo', 10, 'Pão de queijo grande')
+cheese_bread_dish.apply_discount()
 
 restaurant_granu.add_to_menu(cheese_bread_dish)
 restaurant_granu.add_to_menu(hot_chocolate_drink)
