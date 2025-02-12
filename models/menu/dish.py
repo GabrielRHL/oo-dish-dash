@@ -2,5 +2,8 @@ from models.menu.menu import Menu
 
 class Dish(Menu):
     def __init__(self, name, price, description):
-        super().__item__(name, price)
+        super().__init__(name, price)
         self._description = description
+
+    def __str__(self):
+        return self._name
